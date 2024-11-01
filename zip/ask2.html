@@ -1,0 +1,86 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<!--<span class="code-gap" contenteditable="true"></span> -->
+		<title>Υποπρογράμματα</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>Μέρος 2ο - Μετατροπή Συνάρτησης σε Διαδικασία</h1>
+		<div class="container">
+
+			<div id="left">
+				<pre>
+<b>ΣΥΝΑΡΤΗΣΗ</b> ΕΛΕΓΧΟΣ(α,β): <b>ΧΑΡΑΚΤΗΡΑΣ</b>
+<b>ΜΕΤΑΒΛΗΤΕΣ</b>
+	<b>ΑΚΕΡΑΙΕΣ:</b> α,β,γ
+<b>ΑΡΧΗ</b>
+	γ ← α * β
+	<b>ΑΝ</b> γ <b>MOD</b> 2 = 0 <b>ΤΟΤΕ</b>
+		ΕΛΕΓΧΟΣ ← 'άρτιος'
+	<b>ΑΛΛΙΩΣ</b>
+		ΕΛΕΓΧΟΣ ← 'περιττος'
+	<b>ΤΕΛΟΣ_ΑΝ</b>
+<b>ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ</b>
+				</pre>
+				<div class="dragobj">
+					<div class="list" draggable="true">α</div>
+					<div class="list" draggable="true">2</div>
+					<div class="list" draggable="true">γ</div>
+					<div class="list" draggable="true">ΑΚΕΡΑΙΕΣ</div>
+					<div class="list" draggable="true">απ</div>
+					<div class="list" draggable="true">β</div>
+					</div>
+				</div>
+
+			<div id="center">
+				<pre>
+<b>ΔΙΑΔΙΚΑΣΙΑ</b> ΕΛΕΓΧΟΣ(α,β,<span class="code-gap" droppable="true"></span>)
+<b>ΜΕΤΑΒΛΗΤΕΣ</b>
+	<b><span class="code-gap" droppable="true"></span>:</b> α,β,γ
+	<b>ΧΑΡΑΚΤΗΡΕΣ:</b> <span class="code-gap" droppable="true"></span>
+<b>ΑΡΧΗ</b>
+	γ ← <span class="code-gap" droppable="true"></span>*<span class="code-gap" droppable="true"></span>
+	<b>ΑΝ</b> <span class="code-gap" droppable="true"></span> <b>MOD</b> <span class="code-gap" droppable="true"></span> = 0 <b>ΤΟΤΕ</b>
+		<span class="code-gap" droppable="true"></span> ← 'άρτιος'
+	<b>ΑΛΛΙΩΣ</b>
+		<span class="code-gap" droppable="true"></span> ← 'περιττός'
+	<b>ΤΕΛΟΣ_ΑΝ</b>
+<b>ΤΕΛΟΣ_ΔΙΑΔΙΚΑΣΙΑΣ</b>
+				</pre>
+				<br><button id="checkButton">ΕΛΕΓΧΟΣ</button>
+			</div>
+
+			<div id="right">
+				<p>Η προηγούμενη άσκηση ήταν μια από τις περιπτώσεις που μπορεί μια διαδικασία να μετατραπεί σε συνάρτηση.</p><br>
+				<p>Οι διαδικασίες μπορούν να εκτελέσουν οποιαδήποτε λειτουργία από αυτές που μπορεί να εκτελέσει ένα πρόγραμμα. Να εισάγουν δεδομένα, να εκτελέσουν υπολογισμούς, να μεταβάλλουν τις τιμές των μεταβλητών και να τυπώσουν αποτελέσματα. Με τη χρήση των παραμέτρων αυτές τις τιμές μπορούν να τις μεταφέρουν και στα άλλα υποπρογράμματα. <b>Συνεπώς, μπορούν να εκτελέσουν και οποιαδήποτε λειτουργία μιας συνάρτησης.</b></p><br>
+				<p>Μετατρέψτε την διαδικασία σε συνάρτηση. Για να το κάνετε, σύρετε τις λέξεις και συμπληρώστε τα κενά της συνάρτησης.<br></p>
+				<p>Όταν είστε έτοιμοι πατήστε το κουμπί ΕΛΕΓΧΟΣ<br></p>
+				<br>Σε περίπτωση που δυσκολεύεστε, μην διστάσετε να πατήσετε το κουμπί "ΒΟΗΘΕΙΑ" όπου θα εμφανιστούν πληροφορίες που θα βοηθήσουν να λύθεί η άσκηση.
+				<br><button id="show-info-button">ΒΟΗΘΕΙΑ</button>
+					<div id="info-container">
+						<div id="info-content">
+							<ul>
+						<p id="hint1" style="display: none;">
+<b>Στοιχείο 1ο:</b> Η απάντηση θα πρέπει να αποθηκευτεί σε ξεχωριστή μεταβλητή και όχι στο όνομα της διαδικασίας, όπως θα γινόταν σε μια συνάρτηση.<br><br></p>
+						<p id="hint2" style="display: none;"><b>Στοιχείο 2ο:</b>Η απάντηση δεν μπορεί να αποθηκευτεί στις μεταβλητές α,΄β ή γ καθώς είναι ακέραιες μεταβλητές και οι απαντήσεις είναι λέξεις. <br><br></p>
+						<p id="hint3" style="display: none;"><b>Στοιχείο 3ο:</b>Η απάντηση θα πρέπει να αποθηκευτεί στη μεταβλητή 'απ'.</p>
+					</ul>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+		
+		</div>
+
+	</div>
+	<script>
+		window.pageExpectedContent = ["απ", "ΑΚΕΡΑΙΕΣ", "απ", "α", "β", "γ", "2", "απ","απ"];
+		window.currentExerciseNumber = 2;
+	</script>
+	<script src="script.js"></script>
+
+	</body>
+	</html>

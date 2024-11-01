@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+body {
+  background-image: url("background.jpg");
+   background-size: cover;
+}
+
+.container{
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+
+}
+
+#right{
+  gap: 20px; /* Gap between boxes */
+  float: right;
+  margin: 15px;
+}
+
+#center {
+  margin: 10px;
+  border: 2px dashed #fff;
+  float: center;
+  font-family: consolas;
+  font-size: 14px;
+}
+
+#left {
+  margin: 10px;
+  border: 2px dashed #fff;
+  gap: 20px; /* Gap between boxes */
+
+}
+
+.list{
+  background: blue;
+  height: 25px;
+  margin: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  width: auto;
+  padding: 15px;
+  flex-direction: row; /* Display items in a row */
+  text-align: center; /* Center the text horizontally */
+  line-height: 25px; /* Vertically center the text */ 
+}
+
+.code-gap {
+  border: 2px dashed #ccc;
+  background-color: white;
+  padding: 7px;
+  margin: 5px;
+  min-height: 5px;
+  display: inline-block;
+  border-bottom: 1px solid black;
+}
+
+.box {
+  background-color: lightgreen;
+  border: 1px solid #999;
+  padding: 10px;
+}
+
+.dragobj {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  display: flex; /* Display items in a row */
+  flex-wrap: wrap;
+  font-family: 'Courier New', monospace; /* Font for code */
+  font-size: 14px; /* Font size for code */
+  margin-top: 20px;
+}
+
+pre {
+  background-color: #f7f7f7; /* Background color for the code block */
+  border: 1px solid #ccc; /* Border around the code block */
+  padding: 10px; /* Spacing inside the code block */
+  font-family: 'Courier New', monospace; /* Font for code */
+  font-size: 14px; /* Font size for code */
+  line-height: 1.4; /* Line height for code */
+  color: #333; /* Text color */
+  overflow-x: auto; /* Enable horizontal scrollbar if content overflows */
+}
+
+pre b {
+  font-weight: bold;
+  color: blue;
+  background-color: #f7f7f7; 
+}
+
+span {
+  vertical-align: middle;
+  min-width: 10%;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+
+}
+
+body.ask3 .container {
+  /* Add your specific styles here for ask3.html */
+  grid-template-columns: 3fr 4fr 3fr; /* Adjust the widths as needed */
+}

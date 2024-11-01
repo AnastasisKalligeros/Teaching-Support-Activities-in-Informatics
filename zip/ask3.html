@@ -1,0 +1,94 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Υποπρογράμματα</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="ask3">
+		<h1>Μέρος 3ο - Μετατροπή Συνάρτησης σε Διαδικασία</h1>
+		<div class="container">
+
+			<div id="left">
+				<pre>
+<b>ΠΡΟΓΡΑΜΜΑ</b> Άσκηση
+<b>ΜΕΤΑΒΛΗΤΕΣ</b>
+	<b>ΑΚΕΡΑΙΕΣ</b>: κ, λ
+<b>ΑΡΧΗ</b>
+	<b>ΔΙΑΒΑΣΕ</b> κ, λ
+	<b>ΑΝ</b> Αξιολόγηση(κ, λ) >= κ <b>ΤΟΤΕ</b>
+		<b>ΓΡΑΨΕ</b> κ
+	<b>ΑΛΛΙΩΣ</b>
+		<b>ΓΡΑΨΕ</b> λ
+	<b>ΤΕΛΟΣ_ΑΝ</b>
+<b>ΤΕΛΟΣ_ΠΡΟΓΡΑΜΜΑΤΟΣ</b> Άσκηση
+!===============================
+<b>ΣΥΝΑΡΤΗΣΗ</b> Αξιολόγηση(α, β): <b>ΑΚΕΡΑΙΑ</b>
+<b>ΜΕΤΑΒΛΗΤΕΣ</b>
+	<b>ΑΚΕΡΑΙΕΣ:</b> α, β, ω
+<b>ΑΡΧΗ</b>
+	α ← α + 2
+	β ← β – 3
+	ω ← α * β – 2
+	Αξιολόγηση ← ω ^ 2 – (α + β)
+<b>ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ</b>
+					
+				</pre></div>
+				<div id="center">
+				<pre>
+<b>ΠΡΟΓΡΑΜΜΑ</b> Άσκηση
+<b>ΜΕΤΑΒΛΗΤΕΣ</b>
+	<b>ΑΚΕΡΑΙΕΣ:</b> <span class="code-gap" contenteditable="true"></span>, <span class="code-gap" contenteditable="true"></span>,<span class="code-gap" contenteditable="true"></span>
+<b>ΑΡΧΗ</b>
+	<b>ΔΙΑΒΑΣΕ</b> <span class="code-gap" contenteditable="true"></span>, <span class="code-gap" contenteditable="true"></span>
+	<b><span class="code-gap" contenteditable="true"></span></b> ΔΙΑΔ1 (κ,λ,Αξιολόγηση)
+	<b>ΑΝ</b> <span class="code-gap" contenteditable="true"></span> >= κ <b>ΤΟΤΕ</b>
+		<b>ΓΡΑΨΕ</b> <span class="code-gap" contenteditable="true"></span>
+	<b>ΑΛΛΙΩΣ</b>
+		<b>ΓΡΑΨΕ</b> <span class="code-gap" contenteditable="true"></span>
+	<b>ΤΕΛΟΣ_ΑΝ</b>
+<b>ΤΕΛΟΣ_ΠΡΟΓΡΑΜΜΑΤΟΣ</b> Άσκηση
+!===============================
+<b>ΔΙΑΔΙΚΑΣΙΑ</b> ΔΙΑΔ1(α, β, γ)    
+<b>ΜΕΤΑΒΛΗΤΕΣ</b>
+	<b>ΑΚΕΡΑΙΕΣ:</b> <span class="code-gap" contenteditable="true"></span>, <span class="code-gap" contenteditable="true"></span>, ω, <span class="code-gap" contenteditable="true"></span>, τοπ1, τοπ2
+<b>ΑΡΧΗ</b>
+	<span class="code-gap" contenteditable="true"></span> ← α
+	<span class="code-gap" contenteditable="true"></span> ← α + 2
+	<span class="code-gap" contenteditable="true"></span> ← β
+	<span class="code-gap" contenteditable="true"></span> ← β – 3
+	<span class="code-gap" contenteditable="true"></span> ← τοπ1 * τοπ2 – 2
+	γ ← <span class="code-gap" contenteditable="true"></span> ^ <span class="code-gap" contenteditable="true"></span> – (<span class="code-gap" contenteditable="true"></span> + <span class="code-gap" contenteditable="true"></span>)
+<b>ΤΕΛΟΣ_ΔΙΑΔΙΚΑΣΙΑΣ</b>
+				</pre>
+				<br><button id="checkButton">ΕΛΕΓΧΟΣ</button>
+			</div>
+
+			<div id="right">
+				<p>Μετατρέψτε τη συνάρτηση σε διαδικασία συμπληρώνοντας τα κενά. Αυτή τη φορά, για να το κάνετε, θα πρέπει να συμπληρώσετε τα κενά <b>με το πληκτρολόγιο σας</b>.<br></p>
+				<p>Όταν είστε έτοιμοι πατήστε το κουμπί ΕΛΕΓΧΟΣ<br></p>
+				<br>Σε περίπτωση που δυσκολεύεστε, μην διστάσετε να πατήσετε το κουμπί "ΒΟΗΘΕΙΑ" όπου θα εμφανιστούν πληροφορίες που θα βοηθήσουν να λύθεί η άσκηση.
+				<br><button id="show-info-button">ΒΟΗΘΕΙΑ</button>
+					<div id="info-container">
+						<div id="info-content">
+							<ul>
+						<p id="hint1" style="display: none;">
+<b>Στοιχείο 1ο:</b> Ένα υποπρόγραμμα πρέπει να καλεστεί στο κυρίως πρόγραμμα για τνα χρησιμοποιηθεί.<br><br></p>
+						<p id="hint2" style="display: none;"><b>Στοιχείο 2ο:</b> Οι μεταβλητές που αλλάζουν μέσα σε μια συνάρτηση δεν επιστρέφονται στο κυρίως πρόγραμμα. Αντίθετα, μια διαδικασία τις επιστρέφει.<br><br></p>
+						<p id="hint3" style="display: none;"><b>Στοιχείο 3ο:</b> Για να επιστρέψουν οι μεταβλητές α και β αναλλοίωτες στο πρόγραμμα, θα πρέπει να χρησιμοποιηθούν οι μεταβλητές τοπ1 και τοπ2.</p>
+					</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		</div>
+
+	</div>
+	<script>
+		window.pageExpectedContent = ["κ", "λ", "Αξιολόγηση", "κ", "λ", "ΚΑΛΕΣΕ", "Αξιολόγηση", "κ", "λ", "α", "β", "γ", "τοπ1", "τοπ1", "τοπ2", "τοπ2", "ω", "ω", "2", "τοπ1", "τοπ2"];
+	</script>
+	<script src="script.js"></script>
+
+	</body>
+	</html>
